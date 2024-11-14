@@ -1,0 +1,45 @@
+.evo-scroll-to-top {
+  position: fixed;
+  bottom: 24px;
+  right: -45px;
+  width: var( --_scroll-top-btn-width, 36px );
+  height: var( --_scroll-top-btn-height, 36px );
+  line-height: var( --_scroll-top-btn-line-height, 36px );
+  background-color: var(--_scroll-top-btn-background-color, #262626);
+  border:
+    var(--_scroll-top-btn-border-thickness, 1px)
+    var(--_scroll-top-btn-border-style, solid)
+    var(--_scroll-top-btn-border-color, #fafafa);
+  border-radius: var(--_scroll-top-btn-border-radius, 50%);
+  box-shadow: var(--_scroll-top-btn-box-shadow, 0 0 3px 3px #000);
+  cursor: pointer;
+  z-index: var(--_scroll-top-btn-z-index, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate3d(0, 0, 0);
+  transition:
+    background-color .18s cubic-bezier(0.6, 0, 0.1, 1),
+    box-shadow .18s cubic-bezier(0.6, 0, 0.1, 1),
+    transform .18s cubic-bezier(0.6, 0, 0.1, 1);
+}
+
+.evo-scroll-to-top::before {
+  content: '\f062';
+  font-family: 'Font Awesome 6 Free';
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--_scroll-top-icon-color, inherit);
+}
+
+.evo-scroll-to-top.is-visible {
+  transform: translate3d(-65px, 0, 0);
+}
+
+.evo-scroll-to-top i {
+  color: var(--_scroll-top-btn-arrow-color, #fafafa);
+}
+
+.evo-scroll-to-top svg path {
+  fill: var(--_scroll-top-btn-svg-icon-color, #fff);
+}
